@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.navbar{
+    position:absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 5%;
+    z-index: 10;
+}
+.navbar_netflix{
+    width: 125px;
+    height: 100%;
+}
+.navbar__items{
+    display: flex;
+    gap: 10px;
+}
+.netflix_logo{
+    width: 100%;
+    height: 100%;
+}
+.language_drop_down{
+    background: transparent;
+    border: none;
+    color: white;
+}
+.dropdown__container{
+    border: 1px solid white;
+    padding: 0.4rem;
+    border-radius: 4px;
+    background: rgba(0, 0,0,0.4);
+}
+.signin_button{
+
+    border: red;
+    background-color: red;
+    color: white;
+    padding: 0.25rem 0.55rem;
+    border-radius: 4px;
+    height: 35px;
+    width: 100px;
+}
+.hero_bg_image_container{
+    width: 100%;
+    height: 100%;
+}
+.hero_bg_image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.hero_bg_overlay{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0,0,0.4);
+}
+.hero_card{
+    position: absolute;
+    top: 30%;
+    left: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+}
+.hero_title{
+    font-weight: 600;
+    font-size: 3rem;
+}
+.hero_subtitle,
+.hero_description{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.email{
+    width: 450px;
+    height: 60px;
+    color: black;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    border-color: white;
+    background-color:transparent;
+}
+.get_started{
+    font-size: large;
+    width: 170px;
+    height: 60px;
+    background-color: red;
+    border: 1px solid red;
+    color: white;
+    border-radius: 3px;
+}
+.card_1,
+.card_2,
+.card_3,
+.card_4{
+    border-top: 8px rgb(69,69,69);
+    padding: 50px;
+}
+.card_1{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 50% 40%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+.desc_1{
+    padding-left: 30px;
+    
+}
+
+.card_1 img{
+    grid-column: 2/2;
+    grid-row: 1/2;
+}
+
+.style_cards h1{
+    font-size: 3rem;
+    padding: 1rem;
+    padding-left: 0;
+    
+}
+.style_cards h3{
+    font-size: 1.6rem;
+    line-height: 2rem;
+  
+}
+.card_2{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 40% 50%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+.desc_2{
+    padding-left: 100px;
+}
+.card_3{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 50% 40%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+.desc_3{
+    padding-left: 80px;
+    padding-right: 20px;
+}
+.card_3 img{
+    width: 110%;
+    grid-column: 2/2;
+    grid-row: 1/2;
+}
+.card_4{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 40% 50%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+.desc_4{
+    padding-left: 100px;
+}
+hr{
+    border: 5px solid #373A40;
+}
+
+
+.faq{
+    padding: 60px 25%;
+    font-size: 18px;
+    text-align: center;
+    
+}
+.faq h1{
+    font-size: 55px;
+    font-weight: 500px;
+}
+.Questions{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.Questions li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.Questions li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 40px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"]{
+    display: none;
+
+}
+.Questions .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-heigth 0.5s ,padding 0.5s;
+}
+.Questions input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+
+}
+.Questions input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.sign_started{
+    text-align: center;
+}
+
+.footer{
+
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .col{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 2rem;
+
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .dropdown__container{
+    width:100px;
+}
+.copyright_text{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
